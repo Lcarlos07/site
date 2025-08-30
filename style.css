@@ -57,13 +57,14 @@ main {
     width: 100%; /* Para o main ocupar a largura toda */
 }
 
+/* Ajusta o layout da seção para ter um tamanho compacto */
 section {
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 80%; /* Tamanho do conteúdo */
-    max-width: 1200px; /* Tamanho máximo para o conteúdo */
+    width: 60%; /* Diminuímos a largura da seção */
+    max-width: 900px; /* Define uma largura máxima para o conteúdo */
     margin-bottom: 40px; /* Adiciona um espaço abaixo da seção */
 }
 
@@ -73,7 +74,7 @@ h2, h3, h4 {
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 28px; /* Diminuímos um pouco o tamanho do título */
 }
 
 /* Ajuste o tamanho das imagens */
