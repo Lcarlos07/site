@@ -36,7 +36,7 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    padding: 10px 15px; /* Espacemento interno */
+    padding: 10px 15px; /* Espaçamento interno */
     border-radius: 5px; /* Bordas arredondadas */
     transition: background-color 0.3s ease; /* Transição suave */
 }
@@ -89,11 +89,25 @@ h2 {
     margin-right: auto; /* Centraliza a imagem */
 }
 
-/* Ajustes para as imagens de discos, se necessário */
+/* Ajustes para a seção de discos */
+.discos {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 20px; /* Adiciona um espaço entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas em telas pequenas */
+    margin-top: 20px;
+}
+
+.disco {
+    text-align: center;
+    flex: 1 1 150px; /* A largura das imagens será flexível, mas mínima de 150px */
+    max-width: 200px; /* Define um tamanho máximo para as imagens */
+}
+
 .disco img {
-    width: 120px; /* Ajusta o tamanho das imagens dos discos */
-    height: 120px;
-    object-fit: cover;
+    width: 100%; /* As imagens ocupam toda a largura disponível dentro de .disco */
+    height: auto; /* Mantém a proporção das imagens */
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
     border: 2px solid #9b59b6;
     border-radius: 10px;
 }
