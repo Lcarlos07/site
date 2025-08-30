@@ -23,17 +23,26 @@ header {
 header nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaçamento entre os botões */
 }
 
 header nav ul li {
-    display: inline;
-    margin: 0 15px;
+    /* Remover o display inline */
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
+    padding: 10px 15px; /* Espacemento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+header nav ul li a:hover {
+    background-color: #9b59b6; /* Cor do fundo ao passar o mouse */
 }
 
 /* Main Content */
@@ -124,36 +133,4 @@ h2 {
         width: 200px;
         height: 250px;
     }
-}
-/* Header */
-header {
-    background-color: #2e2a47;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Centraliza os botões */
-    gap: 20px; /* Espaçamento entre os botões */
-}
-
-header nav ul li {
-    display: inline;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 15px; /* Espacemento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease; /* Transição suave */
-}
-
-header nav ul li a:hover {
-    background-color: #9b59b6; /* Cor do fundo ao passar o mouse */
 }
