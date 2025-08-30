@@ -29,24 +29,18 @@ header nav ul {
 }
 
 header nav ul li {
-    /* Não precisa de display inline */
+    display: inline;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    padding: 10px 15px; /* Espaçamento interno */
+    padding: 10px 15px; /* Espacemento interno */
     border-radius: 5px; /* Bordas arredondadas */
     transition: background-color 0.3s ease; /* Transição suave */
 }
 
-/* Destacar o link da página ativa */
-header nav ul li a.active {
-    background-color: #9b59b6; /* Cor do fundo para a página ativa */
-}
-
-/* Hover nos links */
 header nav ul li a:hover {
     background-color: #9b59b6; /* Cor do fundo ao passar o mouse */
 }
@@ -81,41 +75,25 @@ h2 {
     font-size: 32px;
 }
 
-/* Discos e Imagens */
-.discos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Ajuste o tamanho das imagens */
+.chester, .emily {
+    width: 100%; /* Ajusta o tamanho para 100% da largura disponível */
+    max-width: 600px; /* Define um tamanho máximo para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
     margin-top: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    display: block; /* Garante que a imagem seja tratada como bloco */
+    margin-left: auto; /* Centraliza a imagem */
+    margin-right: auto; /* Centraliza a imagem */
 }
 
-.disco {
-    text-align: center;
-}
-
+/* Ajustes para as imagens de discos, se necessário */
 .disco img {
-    width: 150px; /* Ajustei o tamanho das imagens */
+    width: 150px; /* Ajusta o tamanho das imagens dos discos */
     height: 150px;
     object-fit: cover;
     border: 2px solid #9b59b6;
     border-radius: 10px;
-}
-
-.chester, .emily {
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    border: 2px solid #9b59b6;
-    margin-top: 20px;
-    border-radius: 10px;
-}
-
-/* Texto */
-.about-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
 }
 
 /* Ajustes para telas pequenas */
