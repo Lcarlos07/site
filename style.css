@@ -8,8 +8,8 @@ body {
     display: flex;
     justify-content: center; /* Centraliza o conteúdo na horizontal */
     align-items: flex-start; /* Alinha o conteúdo no topo */
-    height: auto; /* Ajusta para altura flexível */
-    flex-direction: column; /* Alinha os elementos na direção vertical */
+    height: auto;
+    flex-direction: column;
 }
 
 /* Header */
@@ -17,15 +17,15 @@ header {
     background-color: #2e2a47;
     padding: 15px;
     text-align: center;
-    width: 100%; /* Para o header ocupar a largura toda */
+    width: 100%;
 }
 
 header nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centraliza os botões */
-    gap: 20px; /* Espaçamento entre os botões */
+    justify-content: center;
+    gap: 20px;
 }
 
 header nav ul li {
@@ -36,80 +36,82 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
-    padding: 10px 15px; /* Espaçamento interno */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s ease; /* Transição suave */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    background-color: #9b59b6; /* Cor do fundo ao passar o mouse */
+    background-color: #9b59b6;
 }
 
 /* Main Content */
 main {
     padding: 40px;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
     gap: 30px;
     text-align: center;
-    width: 100%; /* Para o main ocupar a largura toda */
+    width: 100%;
 }
 
-/* Ajusta o layout da seção para ter um tamanho compacto */
+/* Ajusta o layout da seção */
 section {
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 60%; /* Diminuímos a largura da seção */
-    max-width: 900px; /* Define uma largura máxima para o conteúdo */
-    margin-bottom: 40px; /* Adiciona um espaço abaixo da seção */
+    width: 60%;
+    max-width: 900px;
+    margin-bottom: 40px;
 }
 
+/* Títulos */
 h2, h3, h4 {
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
 h2 {
-    font-size: 28px; /* Diminuímos um pouco o tamanho do título */
+    font-size: 28px;
 }
 
-/* Ajuste o tamanho das imagens */
-.chester, .emily {
-    width: 100%; /* Ajusta o tamanho para 100% da largura disponível */
-    max-width: 200px; /* Define um tamanho máximo para as imagens (reduzidas) */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-top: 20px;
-    border-radius: 10px; /* Bordas arredondadas */
-    display: block; /* Garante que a imagem seja tratada como bloco */
-    margin-left: auto; /* Centraliza a imagem */
-    margin-right: auto; /* Centraliza a imagem */
-}
-
-/* Ajustes para a seção de discos */
+/* Ajuste a disposição das imagens dos discos */
 .discos {
     display: flex;
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    gap: 20px; /* Adiciona um espaço entre as imagens */
+    justify-content: center;
+    gap: 20px; /* Adiciona um espaçamento entre as imagens */
     flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas em telas pequenas */
     margin-top: 20px;
 }
 
 .disco {
     text-align: center;
-    flex: 1 1 150px; /* A largura das imagens será flexível, mas mínima de 150px */
+    flex: 1 1 150px; /* Ajusta a flexibilidade das imagens */
     max-width: 200px; /* Define um tamanho máximo para as imagens */
+    margin: 10px 0; /* Adiciona margem vertical entre as imagens */
 }
 
 .disco img {
     width: 100%; /* As imagens ocupam toda a largura disponível dentro de .disco */
-    height: auto; /* Mantém a proporção das imagens */
+    height: 200px; /* Define uma altura fixa para as imagens */
     object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
     border: 2px solid #9b59b6;
     border-radius: 10px;
+}
+
+/* Ajuste o tamanho das imagens */
+.chester, .emily {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Ajustes para telas pequenas */
@@ -125,7 +127,7 @@ h2 {
     }
 
     .disco img {
-        width: 100px; /* Tamanho das imagens menores em telas pequenas */
+        width: 100px; /* Ajusta o tamanho das imagens em telas pequenas */
         height: 100px;
     }
 
