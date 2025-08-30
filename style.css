@@ -7,16 +7,16 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fundo bem escuro, quase preto */
-    color: #e0e0e0; /* Texto claro */
+    background-color: #1e1e1e; /* Fundo preto escuro */
+    color: #dcdcdc; /* Texto claro */
 }
 
 header {
-    background-color: #1d1d1d; /* Preto com um toque mais claro */
+    background-color: #2e2a47; /* Roxo escuro para o cabeçalho */
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid #f00; /* Um toque de vermelho para o estilo da banda */
+    border-bottom: 3px solid #9b59b6; /* Roxo neon para borda */
 }
 
 nav ul {
@@ -29,15 +29,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #dcdcdc; /* Links em cinza claro */
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
-    color: #ff4444; /* Efeito hover em vermelho */
+    color: #9b59b6; /* Efeito de hover em roxo neon */
 }
 
 main {
@@ -73,8 +72,8 @@ p {
 .image-container img {
     width: 100%;
     max-width: 100%;
-    border: 5px solid #ff4444; /* Bordas vermelhas */
-    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5); /* Efeito de brilho em torno das imagens */
+    border: 5px solid #9b59b6; /* Borda roxa neon nas imagens */
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5); /* Sombra roxa suave */
 }
 
 .about-content {
@@ -86,37 +85,38 @@ p {
 
 .about-content img {
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
 }
 
 form input, form textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    background-color: #333;
-    border: 2px solid #f00;
+    background-color: #2c2c2c; /* Fundo escuro para os campos do formulário */
+    border: 2px solid #9b59b6; /* Borda roxa neon */
     color: #fff;
     font-size: 16px;
 }
 
 button {
-    background-color: #f00;
+    background-color: #9b59b6; /* Botão roxo neon */
     color: white;
     padding: 15px 25px;
     border: none;
     cursor: pointer;
     font-size: 18px;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #cc0000;
+    background-color: #8e44ad; /* Hover em roxo mais escuro */
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1d1d1d;
+    background-color: #2e2a47; /* Fundo roxo escuro no rodapé */
     color: #fff;
 }
 
