@@ -5,6 +5,11 @@ body {
     color: #dcdcdc;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo na horizontal */
+    align-items: center; /* Centraliza o conteúdo na vertical */
+    height: 100vh; /* Faz o body ocupar 100% da altura da tela */
+    flex-direction: column; /* Alinha os elementos na direção vertical */
 }
 
 /* Header */
@@ -12,6 +17,7 @@ header {
     background-color: #2e2a47;
     padding: 15px;
     text-align: center;
+    width: 100%; /* Para o header ocupar a largura toda */
 }
 
 header nav ul {
@@ -33,9 +39,13 @@ header nav ul li a {
 /* Main Content */
 main {
     padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: center;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
     gap: 30px;
+    text-align: center;
+    width: 100%; /* Para o main ocupar a largura toda */
 }
 
 section {
@@ -43,6 +53,8 @@ section {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    width: 80%; /* Tamanho do conteúdo */
+    max-width: 1200px; /* Tamanho máximo para o conteúdo */
 }
 
 h2, h3, h4 {
@@ -57,20 +69,19 @@ h2 {
 /* Discos e Imagens */
 .discos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .disco {
-    flex: 1 1 30%;
-    margin: 10px;
     text-align: center;
 }
 
 .disco img {
-    width: 180px;
-    height: 180px;
+    width: 150px; /* Ajustei o tamanho das imagens */
+    height: 150px;
     object-fit: cover;
     border: 2px solid #9b59b6;
     border-radius: 10px;
@@ -95,13 +106,8 @@ h2 {
 /* Ajustes para telas pequenas */
 @media (max-width: 768px) {
     main {
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
-
-    section {
+        gap: 10px;
         width: 90%;
-        margin: 0 auto;
     }
 
     .discos {
@@ -110,8 +116,8 @@ h2 {
     }
 
     .disco img {
-        width: 150px;
-        height: 150px;
+        width: 120px; /* Tamanho das imagens menores em telas pequenas */
+        height: 120px;
     }
 
     .chester, .emily {
