@@ -1,138 +1,235 @@
-/* Global */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #dcdcdc;
+/* Estilos Gerais */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo na horizontal */
-    align-items: flex-start; /* Alinha o conteúdo no topo */
-    height: auto;
-    flex-direction: column;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Header */
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
 header {
-    background-color: #2e2a47;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
+    background-color: #2a2a2a;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-header nav ul {
-    list-style-type: none;
-    padding: 0;
+nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    list-style: none;
 }
 
-header nav ul li {
-    display: inline;
+nav ul li {
+    margin: 0 15px;
 }
 
-header nav ul li a {
-    color: #fff;
+nav ul li a {
+    color: #f0f0f0;
     text-decoration: none;
-    font-size: 20px;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-header nav ul li a:hover {
-    background-color: #9b59b6;
+nav ul li a:hover, 
+nav ul li a.active {
+    background-color: #ff073a;
 }
 
-/* Main Content */
+/* Conteúdo Principal */
 main {
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    text-align: center;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/* Ajusta o layout da seção */
 section {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 60%;
-    max-width: 900px;
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
 }
 
-/* Títulos */
-h2, h3, h4 {
-    text-transform: uppercase;
-    margin-bottom: 15px;
+h1, h2, h3 {
+    color: #ff073a;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 2rem;
 }
 
-/* Ajuste a disposição das imagens dos discos */
-.discos {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Adiciona um espaçamento entre as imagens */
-    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas em telas pequenas */
-    margin-top: 20px;
+h3 {
+    font-size: 1.5rem;
 }
 
-.disco {
+p {
+    margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero {
     text-align: center;
-    flex: 1 1 150px; /* Ajusta a flexibilidade das imagens */
-    max-width: 200px; /* Define um tamanho máximo para as imagens */
-    margin: 10px 0; /* Adiciona margem vertical entre as imagens */
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1200x600/333/ff073a') center/cover no-repeat;
+    border-radius: 8px;
+    margin-bottom: 3rem;
 }
 
-.disco img {
-    width: 100%; /* As imagens ocupam toda a largura disponível dentro de .disco */
-    height: 200px; /* Define uma altura fixa para as imagens */
-    object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
-    border: 2px solid #9b59b6;
-    border-radius: 10px;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }
 
-/* Ajuste o tamanho das imagens */
-.chester, .emily {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: #ff073a;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e00630;
+}
+
+/* Grid de Destaques */
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Discografia */
+.discography {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.album {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #ff073a;
+}
+
+/* Lista de Membros */
+.members {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.members li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+}
+
+/* Formulário de Contato */
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
-/* Ajustes para telas pequenas */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+button {
+    background-color: #ff073a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e00630;
+}
+
+#message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #c62828;
+}
+
+.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2a2a2a;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-    main {
-        gap: 10px;
-        width: 90%;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
-
-    .discos {
-        justify-content: center;
-        gap: 10px;
+    
+    nav ul li {
+        margin: 5px 0;
     }
-
-    .disco img {
-        width: 100px; /* Ajusta o tamanho das imagens em telas pequenas */
-        height: 100px;
+    
+    .hero h1 {
+        font-size: 2.5rem;
     }
-
-    .chester, .emily {
-        width: 150px;
-        height: 200px;
+    
+    .highlight-grid,
+    .discography {
+        grid-template-columns: 1fr;
     }
 }
