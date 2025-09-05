@@ -1,31 +1,56 @@
-// script.js
-document.getElementById('form-contato').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Limpar mensagens anteriores
-    document.getElementById('mensagem-erro').textContent = '';
-    document.getElementById('mensagem-sucesso').textContent = '';
-
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
-
-    // Validar campos
-    if (!nome || !email || !mensagem) {
-        document.getElementById('mensagem-erro').textContent = 'Todos os campos são obrigatórios!';
-        return;
+// Validação do formulário de contato
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Limpar mensagens anteriores
+            const messageDiv = document.getElementById('message');
+            messageDiv.className = '';
+            messageDiv.textContent = '';
+            
+            // Obter valores dos campos
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+            
+            // Validar campos
+            let isValid = true;
+            let errorMessage = '';
+            
+            if (!nome) {
+                isValid = false;
+                errorMessage = 'Por favor, informe seu nome.';
+            } else if (!email) {
+                isValid = false;
+                errorMessage = 'Por favor, informe seu e-mail.';
+            } else if (!isValidEmail(email)) {
+                isValid = false;
+                errorMessage = 'Por favor, informe um e-mail válido.';
+            } else if (!mensagem) {
+                isValid = false;
+                errorMessage = 'Por favor, escreva sua mensagem.';
+            }
+            
+            // Exibir mensagem de erro ou sucesso
+            if (!isValid) {
+                messageDiv.textContent = errorMessage;
+                messageDiv.className = 'error';
+            } else {
+                messageDiv.textContent = 'Mensagem enviada com sucesso! Obrigado pelo contato.';
+                messageDiv.className = 'success';
+                
+                // Limpar o formulário
+                contactForm.reset();
+            }
+        });
     }
-
-    // Validar formato de e-mail
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-        document.getElementById('mensagem-erro').textContent = 'Por favor, insira um e-mail válido!';
-        return;
-    }
-
-    // Exibir mensagem de sucesso
-    document.getElementById('mensagem-sucesso').textContent = 'Formulário enviado com sucesso!';
-
-    // Limpar os campos após envio (opcional)
-    document.getElementById('form-contato').reset();
 });
+
+// Função para validar e-mail
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
